@@ -1,0 +1,1283 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY webprotege "http://protege.stanford.edu/webprotege/" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://webprotege.stanford.edu/project/72sC8T7sXdio5fGsCd5uA#"
+     xml:base="http://webprotege.stanford.edu/project/72sC8T7sXdio5fGsCd5uA"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:webprotege="http://protege.stanford.edu/webprotege/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://informatica.ru/ontology">
+        <webprotege:revision rdf:datatype="&xsd;integer">61</webprotege:revision>
+        <dc:creator rdf:datatype="&xsd;string">Andrey Toporkov</dc:creator>
+        <dc:date rdf:datatype="&xsd;dateTime">Feb 5, 2015 1:40:20 AM</dc:date>
+        <dc:creator rdf:datatype="&xsd;string">Karas89</dc:creator>
+        <rdfs:comment rdf:datatype="&xsd;string">domain ontology for it-course</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://informatica.ru/ontology#InstanceOf -->
+
+    <owl:ObjectProperty rdf:about="http://informatica.ru/ontology#InstanceOf">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://informatica.ru/ontology/CreatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://informatica.ru/ontology/CreatedBy"/>
+    
+
+
+    <!-- http://informatica.ru/ontology/CreatorOf -->
+
+    <owl:ObjectProperty rdf:about="http://informatica.ru/ontology/CreatorOf"/>
+    
+
+
+    <!-- http://informatica.ru/ontology/Includes -->
+
+    <owl:ObjectProperty rdf:about="http://informatica.ru/ontology/Includes">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://informatica.ru/ontology/PartOf -->
+
+    <owl:ObjectProperty rdf:about="http://informatica.ru/ontology/PartOf">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://informatica.ru/ontology/topObjectProperty/Antonym -->
+
+    <owl:ObjectProperty rdf:about="http://informatica.ru/ontology/topObjectProperty/Antonym"/>
+    
+
+
+    <!-- http://informatica.ru/ontology/topObjectProperty/Homonym -->
+
+    <owl:ObjectProperty rdf:about="http://informatica.ru/ontology/topObjectProperty/Homonym"/>
+    
+
+
+    <!-- http://informatica.ru/ontology/topObjectProperty/Paronym -->
+
+    <owl:ObjectProperty rdf:about="http://informatica.ru/ontology/topObjectProperty/Paronym"/>
+    
+
+
+    <!-- http://informatica.ru/ontology/topObjectProperty/Quasisynonym -->
+
+    <owl:ObjectProperty rdf:about="http://informatica.ru/ontology/topObjectProperty/Quasisynonym"/>
+    
+
+
+    <!-- http://informatica.ru/ontology/topObjectProperty/Quasisynonym/Synonym -->
+
+    <owl:ObjectProperty rdf:about="http://informatica.ru/ontology/topObjectProperty/Quasisynonym/Synonym">
+        <rdfs:subPropertyOf rdf:resource="http://informatica.ru/ontology/topObjectProperty/Quasisynonym"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- hhttp://informatica.ru/ontology/Thing/Object/Материя/Предмет -->
+
+    <owl:Class rdf:about="hhttp://informatica.ru/ontology/Thing/Object/Материя/Предмет">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Материя"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Abstract/Домен -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Abstract/Домен">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Область действия, мысли, влияния</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Object/Организация -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Object/Организация">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Object/Человек -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Object/Человек">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Quality/Количество -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Quality/Количество">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Quality/Размер -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Quality/Размер">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract"/>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Event -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Event"/>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object"/>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Quality -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Quality"/>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Алгоритм -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Алгоритм">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Способ (программа) решения вычислительных и др. задач, точно предписывающий, как и в какой последовательности получить результат, однозначно определяемый исходными данными.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Атом -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Атом">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Мельчайшая структурная единица чего-либо</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Вектор -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Вектор">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Время -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Время">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Непространственный порядок, в котором события сменяют друг друга; интервал между двумя событиями</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Данные -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Данные">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Информация, обработанная и представленная в формализованном виде для дальнейшей обработки</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Дедукция -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Дедукция">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Переход от посылок к заключению, опирающийся на логический закон, в силу чего заключение с логической необходимостью следует из принятых посылок.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Действие -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Действие">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Элемент деятельности, процесс перехода из одного состояния в другое, которое характеризуется наличием сознательной цели.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Задача -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Задача">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Вопрос, требующий нахождения решения по известным данным с соблюдением определённых условий.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Индукция -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Индукция">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Метод познания, связанный с обобщением наблюдений и экспериментов</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Интерфейс -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Интерфейс">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Совокупность технических и программных средств, обеспечивающих взаимодействие различных функциональных устройств вычислительных, управляющих или измерительных систем</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Интуиция -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Интуиция">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Постижение истины путем непосредственного ее усмотрения без обоснования с помощью доказательства; субъективная способность выходить за пределы опыта путем мысленного схватывания (&quot;озарения&quot;) или обобщения в образной форме непознанных связей, закономерностей.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Информация -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Информация">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Нематериальная сущность, при помощи которой с
+любой точностью можно описывать реальные (материальные), вирту-
+альные (возможные) и понятийные сущности</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Исчисление -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Исчисление">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Система символов, основными компонентами которой являются: 1) алфавит (совокупность элементарных символов — букв. цифр, скобок и т.п.), 2) правила построения формул из символов алфавита, 3) аксиомы (исходные доказуемые формулы), 4) правила вывода теорем (производных доказуемых формул) из аксиом. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Итерация -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Итерация">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Категория -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Категория">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Высшее родовое понятие, обозначающее какой-нибудь наиболее общий, отвлеченный разряд явлений, предметов или их признаков</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Код -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Код">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Система условных обозначений, сигналов, передающих информацию</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Логика -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Логика">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Наука об общих законах развития объективного мира и познания</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Множество -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Множество">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Конечная или бесконечная совокупность объектов, выделенная по общему для них признаку (свойству или отношению), мыслимая как нечто целое</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Модель -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Модель">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Абстрактное или вещественное отображение объектов или процессов, адекватное исследуемым объектам (процессам) в отношении некоторых заданных критериев</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Модуль -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Модуль">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Неопределенность -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Неопределенность">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Отсутствие полного тождества некоторого материального или идеального предмета (А) самому себе и возможности проведения жесткой разграничительной линии между А и не-А.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Порядок -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Порядок">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Числовая характеристика математических объектов</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Поток -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Поток">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Непрерывное движение кого-либо, чего-либо</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Предикат -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Предикат">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Языковое выражение, обозначающее какое-то свойство или отношение</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Программа -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Программа">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Содержание и план деятельности</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Пространство -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Пространство">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Объективная реальность, форма существования материи, характеризующаяся протяженностью и объемом.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Протокол -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Протокол">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">В информатике, набор соглашений, заключённых между пользователями компьютерных сетей, в которых оговариваются технические параметры устройств и программные средства для организации приёма и передачи информации в этих сетях.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Рекурсия -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Рекурсия">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Символ -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Символ">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Идея, образ или объект, имеющий собственное содержание и одновременно представляющий в обобщенной, неразвернутой форме некоторое иное содержание</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Система -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Система">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Множество элементов, находящихся в отношениях и связях друг с другом, образующих определенную целостность, единство</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Скаляр -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Скаляр">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Структура -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Структура">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Совокупность устойчивых связей объекта, обеспечивающих его целостность и тождественность самому себе, т. е. сохранение основных свойств при различных внешних и внутренних изменениях</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Форма -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Форма">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Способ существования содержания, неотделимый от него и служащий его выражением</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Функция -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Функция">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Явление, зависящее от другого и изменяющееся по мере изменения этого другого явления</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Цикл -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Цикл">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Элемент -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Элемент">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract"/>
+        <rdfs:comment xml:lang="ru">Составная часть сложного целого</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Наука/Физика -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Наука/Физика">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Наука"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Наука/Физика/Астрономия -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Наука/Физика/Астрономия">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract/Наука/Физика"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Наука/Физика/Механика -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Наука/Физика/Механика">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract/Наука/Физика"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Наука/Физика/Электроника -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Наука/Физика/Электроника">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract/Наука/Физика"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Abstract/Наука/Физика/Электротехника -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Abstract/Наука/Физика/Электротехника">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract/Наука/Физика"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Event/Анализ -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Event/Анализ">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Event"/>
+        <rdfs:comment xml:lang="ru">Процесс расчленения целого предмета или явления на составные части — в плане мысленных представлений или материального моделирования.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Event/Доказательство -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Event/Доказательство">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Event"/>
+        <rdfs:comment xml:lang="ru">Установление (обоснование) истинности высказывания, суждения, теории</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Event/Запись -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Event/Запись">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Event"/>
+        <rdfs:comment xml:lang="ru">Процесс, посредством которого информация вносится и сохраняется в некотором физическом теле с целью её последующего получения (воспроизведения)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Event/Инициализация -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Event/Инициализация">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Event"/>
+        <rdfs:comment xml:lang="ru">Приведение к исходному состоянию</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Event/Кодирование -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Event/Кодирование">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Event"/>
+        <rdfs:comment xml:lang="ru">Отображение (преобразование) некоторых объектов (событий, состояний) в систему конструктивных объектов (называемых кодовыми образами), совершаемое по определенным правилам</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Event/Компоновка -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Event/Компоновка">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Event"/>
+        <rdfs:comment xml:lang="ru">Процесс составления целого из частей</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Event/Маршрутизация -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Event/Маршрутизация">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Event"/>
+        <rdfs:comment xml:lang="ru">Процесс определения маршрута следования информации в сетях связи</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Event/Навигация -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Event/Навигация">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Event"/>
+        <rdfs:comment xml:lang="ru">Процесс определения местоположения и прокладки маршрута</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Event/Синтез -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Event/Синтез">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Event/Трансляция -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Event/Трансляция">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Event/Управление -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Event/Управление">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Event/Чтение -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Event/Чтение">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Искусство -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Искусство">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Материя -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Материя">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Метод -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Метод">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Наука -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Наука">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Парадигма -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Парадигма">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Программа -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Программа">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Слово -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Слово">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/СтруктурнаяЕдиница -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/СтруктурнаяЕдиница">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Текст -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Текст">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Теория -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Теория">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Техника -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Техника">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Энергия -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Энергия">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Язык -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Язык">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Искусство"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Искусство/Литература -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Искусство/Литература">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Искусство"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Искусство/Музыка -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Искусство/Музыка">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Искусство"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство/Архитектура -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство/Архитектура">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство/Живопись -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство/Живопись">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство/Скульптура -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство/Скульптура">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство/Фотография -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство/Фотография">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Искусство/Литература/Поэзия -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Искусство/Литература/Поэзия">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Искусство/Литература"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Искусство/Литература/Проза -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Искусство/Литература/Проза">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Искусство/Литература"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Материя/Вещество -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Материя/Вещество">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Материя"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Материя/Материал -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Материя/Материал">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Материя"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Материя/Предмет/Устройство -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Материя/Предмет/Устройство">
+        <rdfs:subClassOf rdf:resource="hhttp://informatica.ru/ontology/Thing/Object/Материя/Предмет"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Материя/Предмет/Устройство/ВычислительноеУстройство -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Материя/Предмет/Устройство/ВычислительноеУстройство">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Материя/Предмет/Устройство"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Материя/Предмет/Устройство/ОптическоеУстройство -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Материя/Предмет/Устройство/ОптическоеУстройство">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Материя/Предмет/Устройство"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Наука/Информатика -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Наука/Информатика">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Наука"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Наука/Логика -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Наука/Логика">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Наука"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Наука/Информатика/БазыДанных -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Наука/Информатика/БазыДанных">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Наука/Информатика"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ЗащитаИнформации -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ЗащитаИнформации">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Наука/Информатика"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ИнформационныеСети -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ИнформационныеСети">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Наука/Информатика"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ИскусственныйИнтеллект -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ИскусственныйИнтеллект">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Наука/Информатика"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ЗащитаИнформации/Криптография -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ЗащитаИнформации/Криптография">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ЗащитаИнформации"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ЗащитаИнформации/Стеганография -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ЗащитаИнформации/Стеганография">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ЗащитаИнформации"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Наука/Математика/Алгебра -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Наука/Математика/Алгебра">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Objectt/Наука/Математика"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Наука/Математика/Арифметика -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Наука/Математика/Арифметика">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Objectt/Наука/Математика"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Наука/Математика/Геометрия -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Наука/Математика/Геометрия">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Objectt/Наука/Математика"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Наука/Математика/ДискретнаяМатематика -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Наука/Математика/ДискретнаяМатематика">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Objectt/Наука/Математика"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Наука/Математика/МатематическийАнализ -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Наука/Математика/МатематическийАнализ">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Objectt/Наука/Математика"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Наука/Математика/Статистика -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Наука/Математика/Статистика">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Objectt/Наука/Математика"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Наука/Математика/Топология -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Наука/Математика/Топология">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Objectt/Наука/Математика"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Наука/Физика/Гидравлика -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Наука/Физика/Гидравлика">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Abstract/Наука/Физика"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Организация/МеждународнаяОрганизация -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Организация/МеждународнаяОрганизация">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Object/Организация"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Организация/ОбразовательноеУчреждение -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Организация/ОбразовательноеУчреждение">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Object/Организация"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/СтруктурнаяЕдиница/Модуль -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/СтруктурнаяЕдиница/Модуль">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/СтруктурнаяЕдиница"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Теория/ТеорияВероятностей -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Теория/ТеорияВероятностей">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Теория"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Теория/ТеорияОтносительности -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Теория/ТеорияОтносительности">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Теория"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Теория/ТеорияВероятностей/ТеорияИгр -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Теория/ТеорияВероятностей/ТеорияИгр">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Теория/ТеорияВероятностей"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Человек/Пользователь -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Человек/Пользователь">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Object/Человек"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Человек/Разработчик -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Человек/Разработчик">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Object/Человек"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Человек/Ученый -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Человек/Ученый">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Object/Человек"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Язык/ЕстественныйЯзык -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Язык/ЕстественныйЯзык">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Язык"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Язык"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкРазметки -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкРазметки">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкСценариев -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкСценариев">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования/АлгоритмическийЯзык -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования/АлгоритмическийЯзык">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования/ЛогическийЯзык -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования/ЛогическийЯзык">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования/ФункциональныйЯзык -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования/ФункциональныйЯзык">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования/ЭзотерическийЯзык -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования/ЭзотерическийЯзык">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Objectt/Наука/Математика -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Objectt/Наука/Математика">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Object/Наука"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Quality/Емкость -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Quality/Емкость">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Quality/Жесткость -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Quality/Жесткость">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Quality/Масса -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Quality/Масса">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Quality/Надежность -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Quality/Надежность">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Quality/Порядок -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Quality/Порядок">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Quality"/>
+        <rdfs:comment xml:lang="ru">Определённая последовательность в расположении, размещении, ходе чего-либо</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Quality/Проводимость -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Quality/Проводимость">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Quality/Прочность -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Quality/Прочность">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Quality/Размер -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Quality/Размер">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Quality/Светимость -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Quality/Светимость">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Quality/Скорость -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Quality/Скорость">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Quality/Упругость -->
+
+    <owl:Class rdf:about="http://informatica.ru/ontology/Thing/Quality/Упругость">
+        <rdfs:subClassOf rdf:resource="http://informatica.ru/ontology/Thing/Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Наука/Информатика/Биоинформатика -->
+
+    <owl:NamedIndividual rdf:about="http://informatica.ru/ontology/Thing/Object/Наука/Информатика/Биоинформатика">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://informatica.ru/ontology/PartOf"/>
+                <owl:allValuesFrom rdf:resource="http://informatica.ru/ontology/Thing/Object/Наука/Информатика"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://informatica.ru/ontology/Thing/Object/Теория/ТеорияОтносительности/ОбщаяТеорияОтносительности -->
+
+    <owl:NamedIndividual rdf:about="http://informatica.ru/ontology/Thing/Object/Теория/ТеорияОтносительности/ОбщаяТеорияОтносительности">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://informatica.ru/ontology#InstanceOf"/>
+                <owl:allValuesFrom rdf:resource="http://informatica.ru/ontology/Thing/Object/Теория/ТеорияОтносительности"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
