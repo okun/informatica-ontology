@@ -1,0 +1,1306 @@
+@prefix : <http://webprotege.stanford.edu/project/72sC8T7sXdio5fGsCd5uA#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix webprotege: <http://protege.stanford.edu/webprotege/> .
+@base <http://informatica.ru/ontology> .
+
+<http://informatica.ru/ontology> rdf:type owl:Ontology ;
+                                 
+                                 webprotege:revision 61 ;
+                                 
+                                 dc:creator "Andrey Toporkov"^^xsd:string ;
+                                 
+                                 dc:date "Feb 5, 2015 1:40:20 AM"^^xsd:dateTime ;
+                                 
+                                 dc:creator "Karas89"^^xsd:string ;
+                                 
+                                 rdfs:comment "domain ontology for it-course"^^xsd:string .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://informatica.ru/ontology#InstanceOf
+
+<http://informatica.ru/ontology#InstanceOf> rdf:type owl:ObjectProperty ,
+                                                     owl:TransitiveProperty .
+
+
+
+###  http://informatica.ru/ontology/CreatedBy
+
+<http://informatica.ru/ontology/CreatedBy> rdf:type owl:ObjectProperty .
+
+
+
+###  http://informatica.ru/ontology/CreatorOf
+
+<http://informatica.ru/ontology/CreatorOf> rdf:type owl:ObjectProperty .
+
+
+
+###  http://informatica.ru/ontology/Includes
+
+<http://informatica.ru/ontology/Includes> rdf:type owl:ObjectProperty ,
+                                                   owl:TransitiveProperty .
+
+
+
+###  http://informatica.ru/ontology/PartOf
+
+<http://informatica.ru/ontology/PartOf> rdf:type owl:ObjectProperty ,
+                                                 owl:TransitiveProperty .
+
+
+
+###  http://informatica.ru/ontology/topObjectProperty/Antonym
+
+<http://informatica.ru/ontology/topObjectProperty/Antonym> rdf:type owl:ObjectProperty .
+
+
+
+###  http://informatica.ru/ontology/topObjectProperty/Homonym
+
+<http://informatica.ru/ontology/topObjectProperty/Homonym> rdf:type owl:ObjectProperty .
+
+
+
+###  http://informatica.ru/ontology/topObjectProperty/Paronym
+
+<http://informatica.ru/ontology/topObjectProperty/Paronym> rdf:type owl:ObjectProperty .
+
+
+
+###  http://informatica.ru/ontology/topObjectProperty/Quasisynonym
+
+<http://informatica.ru/ontology/topObjectProperty/Quasisynonym> rdf:type owl:ObjectProperty .
+
+
+
+###  http://informatica.ru/ontology/topObjectProperty/Quasisynonym/Synonym
+
+<http://informatica.ru/ontology/topObjectProperty/Quasisynonym/Synonym> rdf:type owl:ObjectProperty ;
+                                                                        
+                                                                        rdfs:subPropertyOf <http://informatica.ru/ontology/topObjectProperty/Quasisynonym> .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://informatica.ru/ontology/Abstract/Домен
+
+<http://informatica.ru/ontology/Abstract/Домен> rdf:type owl:Class ;
+                                                
+                                                rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                
+                                                rdfs:comment "Область действия, мысли, влияния"@ru .
+
+
+
+###  http://informatica.ru/ontology/Object/Организация
+
+<http://informatica.ru/ontology/Object/Организация> rdf:type owl:Class ;
+                                                    
+                                                    rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object> .
+
+
+
+###  http://informatica.ru/ontology/Object/Человек
+
+<http://informatica.ru/ontology/Object/Человек> rdf:type owl:Class ;
+                                                
+                                                rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object> .
+
+
+
+###  http://informatica.ru/ontology/Quality/Количество
+
+<http://informatica.ru/ontology/Quality/Количество> rdf:type owl:Class ;
+                                                    
+                                                    rdfs:subClassOf <http://informatica.ru/ontology/Thing/Quality> .
+
+
+
+###  http://informatica.ru/ontology/Quality/Размер
+
+<http://informatica.ru/ontology/Quality/Размер> rdf:type owl:Class ;
+                                                
+                                                rdfs:subClassOf <http://informatica.ru/ontology/Thing/Quality> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract
+
+<http://informatica.ru/ontology/Thing/Abstract> rdf:type owl:Class ;
+                                                
+                                                rdfs:subClassOf owl:Thing .
+
+
+
+###  http://informatica.ru/ontology/Thing/Event
+
+<http://informatica.ru/ontology/Thing/Event> rdf:type owl:Class ;
+                                             
+                                             rdfs:subClassOf owl:Thing .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object
+
+<http://informatica.ru/ontology/Thing/Object> rdf:type owl:Class ;
+                                              
+                                              rdfs:subClassOf owl:Thing .
+
+
+
+###  http://informatica.ru/ontology/Thing/Quality
+
+<http://informatica.ru/ontology/Thing/Quality> rdf:type owl:Class ;
+                                               
+                                               rdfs:subClassOf owl:Thing .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Алгоритм
+
+<http://informatica.ru/ontology/Thing/Abstract/Алгоритм> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                         
+                                                         rdfs:comment "Способ (программа) решения вычислительных и др. задач, точно предписывающий, как и в какой последовательности получить результат, однозначно определяемый исходными данными."@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Атом
+
+<http://informatica.ru/ontology/Thing/Abstract/Атом> rdf:type owl:Class ;
+                                                     
+                                                     rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                     
+                                                     rdfs:comment "Мельчайшая структурная единица чего-либо"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Вектор
+
+<http://informatica.ru/ontology/Thing/Abstract/Вектор> rdf:type owl:Class ;
+                                                       
+                                                       rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Время
+
+<http://informatica.ru/ontology/Thing/Abstract/Время> rdf:type owl:Class ;
+                                                      
+                                                      rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                      
+                                                      rdfs:comment "Непространственный порядок, в котором события сменяют друг друга; интервал между двумя событиями"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Данные
+
+<http://informatica.ru/ontology/Thing/Abstract/Данные> rdf:type owl:Class ;
+                                                       
+                                                       rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                       
+                                                       rdfs:comment "Информация, обработанная и представленная в формализованном виде для дальнейшей обработки"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Дедукция
+
+<http://informatica.ru/ontology/Thing/Abstract/Дедукция> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                         
+                                                         rdfs:comment "Переход от посылок к заключению, опирающийся на логический закон, в силу чего заключение с логической необходимостью следует из принятых посылок."@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Действие
+
+<http://informatica.ru/ontology/Thing/Abstract/Действие> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                         
+                                                         rdfs:comment "Элемент деятельности, процесс перехода из одного состояния в другое, которое характеризуется наличием сознательной цели."@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Задача
+
+<http://informatica.ru/ontology/Thing/Abstract/Задача> rdf:type owl:Class ;
+                                                       
+                                                       rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                       
+                                                       rdfs:comment "Вопрос, требующий нахождения решения по известным данным с соблюдением определённых условий."@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Индукция
+
+<http://informatica.ru/ontology/Thing/Abstract/Индукция> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                         
+                                                         rdfs:comment "Метод познания, связанный с обобщением наблюдений и экспериментов"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Интерфейс
+
+<http://informatica.ru/ontology/Thing/Abstract/Интерфейс> rdf:type owl:Class ;
+                                                          
+                                                          rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                          
+                                                          rdfs:comment "Совокупность технических и программных средств, обеспечивающих взаимодействие различных функциональных устройств вычислительных, управляющих или измерительных систем"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Интуиция
+
+<http://informatica.ru/ontology/Thing/Abstract/Интуиция> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                         
+                                                         rdfs:comment "Постижение истины путем непосредственного ее усмотрения без обоснования с помощью доказательства; субъективная способность выходить за пределы опыта путем мысленного схватывания (\"озарения\") или обобщения в образной форме непознанных связей, закономерностей."@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Информация
+
+<http://informatica.ru/ontology/Thing/Abstract/Информация> rdf:type owl:Class ;
+                                                           
+                                                           rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                           
+                                                           rdfs:comment """Нематериальная сущность, при помощи которой с
+любой точностью можно описывать реальные (материальные), вирту-
+альные (возможные) и понятийные сущности"""@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Исчисление
+
+<http://informatica.ru/ontology/Thing/Abstract/Исчисление> rdf:type owl:Class ;
+                                                           
+                                                           rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                           
+                                                           rdfs:comment "Система символов, основными компонентами которой являются: 1) алфавит (совокупность элементарных символов — букв. цифр, скобок и т.п.), 2) правила построения формул из символов алфавита, 3) аксиомы (исходные доказуемые формулы), 4) правила вывода теорем (производных доказуемых формул) из аксиом. "@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Итерация
+
+<http://informatica.ru/ontology/Thing/Abstract/Итерация> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Категория
+
+<http://informatica.ru/ontology/Thing/Abstract/Категория> rdf:type owl:Class ;
+                                                          
+                                                          rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                          
+                                                          rdfs:comment "Высшее родовое понятие, обозначающее какой-нибудь наиболее общий, отвлеченный разряд явлений, предметов или их признаков"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Код
+
+<http://informatica.ru/ontology/Thing/Abstract/Код> rdf:type owl:Class ;
+                                                    
+                                                    rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                    
+                                                    rdfs:comment "Система условных обозначений, сигналов, передающих информацию"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Логика
+
+<http://informatica.ru/ontology/Thing/Abstract/Логика> rdf:type owl:Class ;
+                                                       
+                                                       rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                       
+                                                       rdfs:comment "Наука об общих законах развития объективного мира и познания"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Множество
+
+<http://informatica.ru/ontology/Thing/Abstract/Множество> rdf:type owl:Class ;
+                                                          
+                                                          rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                          
+                                                          rdfs:comment "Конечная или бесконечная совокупность объектов, выделенная по общему для них признаку (свойству или отношению), мыслимая как нечто целое"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Модель
+
+<http://informatica.ru/ontology/Thing/Abstract/Модель> rdf:type owl:Class ;
+                                                       
+                                                       rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                       
+                                                       rdfs:comment "Абстрактное или вещественное отображение объектов или процессов, адекватное исследуемым объектам (процессам) в отношении некоторых заданных критериев"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Модуль
+
+<http://informatica.ru/ontology/Thing/Abstract/Модуль> rdf:type owl:Class ;
+                                                       
+                                                       rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Неопределенность
+
+<http://informatica.ru/ontology/Thing/Abstract/Неопределенность> rdf:type owl:Class ;
+                                                                 
+                                                                 rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                                 
+                                                                 rdfs:comment "Отсутствие полного тождества некоторого материального или идеального предмета (А) самому себе и возможности проведения жесткой разграничительной линии между А и не-А."@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Порядок
+
+<http://informatica.ru/ontology/Thing/Abstract/Порядок> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                        
+                                                        rdfs:comment "Числовая характеристика математических объектов"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Поток
+
+<http://informatica.ru/ontology/Thing/Abstract/Поток> rdf:type owl:Class ;
+                                                      
+                                                      rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                      
+                                                      rdfs:comment "Непрерывное движение кого-либо, чего-либо"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Предикат
+
+<http://informatica.ru/ontology/Thing/Abstract/Предикат> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                         
+                                                         rdfs:comment "Языковое выражение, обозначающее какое-то свойство или отношение"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Программа
+
+<http://informatica.ru/ontology/Thing/Abstract/Программа> rdf:type owl:Class ;
+                                                          
+                                                          rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                          
+                                                          rdfs:comment "Содержание и план деятельности"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Пространство
+
+<http://informatica.ru/ontology/Thing/Abstract/Пространство> rdf:type owl:Class ;
+                                                             
+                                                             rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                             
+                                                             rdfs:comment "Объективная реальность, форма существования материи, характеризующаяся протяженностью и объемом."@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Протокол
+
+<http://informatica.ru/ontology/Thing/Abstract/Протокол> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                         
+                                                         rdfs:comment "В информатике, набор соглашений, заключённых между пользователями компьютерных сетей, в которых оговариваются технические параметры устройств и программные средства для организации приёма и передачи информации в этих сетях."@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Рекурсия
+
+<http://informatica.ru/ontology/Thing/Abstract/Рекурсия> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Символ
+
+<http://informatica.ru/ontology/Thing/Abstract/Символ> rdf:type owl:Class ;
+                                                       
+                                                       rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                       
+                                                       rdfs:comment "Идея, образ или объект, имеющий собственное содержание и одновременно представляющий в обобщенной, неразвернутой форме некоторое иное содержание"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Система
+
+<http://informatica.ru/ontology/Thing/Abstract/Система> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                        
+                                                        rdfs:comment "Множество элементов, находящихся в отношениях и связях друг с другом, образующих определенную целостность, единство"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Скаляр
+
+<http://informatica.ru/ontology/Thing/Abstract/Скаляр> rdf:type owl:Class ;
+                                                       
+                                                       rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Структура
+
+<http://informatica.ru/ontology/Thing/Abstract/Структура> rdf:type owl:Class ;
+                                                          
+                                                          rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                          
+                                                          rdfs:comment "Совокупность устойчивых связей объекта, обеспечивающих его целостность и тождественность самому себе, т. е. сохранение основных свойств при различных внешних и внутренних изменениях"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Форма
+
+<http://informatica.ru/ontology/Thing/Abstract/Форма> rdf:type owl:Class ;
+                                                      
+                                                      rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                      
+                                                      rdfs:comment "Способ существования содержания, неотделимый от него и служащий его выражением"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Функция
+
+<http://informatica.ru/ontology/Thing/Abstract/Функция> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                        
+                                                        rdfs:comment "Явление, зависящее от другого и изменяющееся по мере изменения этого другого явления"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Цикл
+
+<http://informatica.ru/ontology/Thing/Abstract/Цикл> rdf:type owl:Class ;
+                                                     
+                                                     rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Элемент
+
+<http://informatica.ru/ontology/Thing/Abstract/Элемент> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract> ;
+                                                        
+                                                        rdfs:comment "Составная часть сложного целого"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Наука/Физика
+
+<http://informatica.ru/ontology/Thing/Abstract/Наука/Физика> rdf:type owl:Class ;
+                                                             
+                                                             rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Наука> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Наука/Физика/Астрономия
+
+<http://informatica.ru/ontology/Thing/Abstract/Наука/Физика/Астрономия> rdf:type owl:Class ;
+                                                                        
+                                                                        rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract/Наука/Физика> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Наука/Физика/Механика
+
+<http://informatica.ru/ontology/Thing/Abstract/Наука/Физика/Механика> rdf:type owl:Class ;
+                                                                      
+                                                                      rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract/Наука/Физика> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Наука/Физика/Электроника
+
+<http://informatica.ru/ontology/Thing/Abstract/Наука/Физика/Электроника> rdf:type owl:Class ;
+                                                                         
+                                                                         rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract/Наука/Физика> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Abstract/Наука/Физика/Электротехника
+
+<http://informatica.ru/ontology/Thing/Abstract/Наука/Физика/Электротехника> rdf:type owl:Class ;
+                                                                            
+                                                                            rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract/Наука/Физика> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Event/Анализ
+
+<http://informatica.ru/ontology/Thing/Event/Анализ> rdf:type owl:Class ;
+                                                    
+                                                    rdfs:subClassOf <http://informatica.ru/ontology/Thing/Event> ;
+                                                    
+                                                    rdfs:comment "Процесс расчленения целого предмета или явления на составные части — в плане мысленных представлений или материального моделирования."@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Event/Доказательство
+
+<http://informatica.ru/ontology/Thing/Event/Доказательство> rdf:type owl:Class ;
+                                                            
+                                                            rdfs:subClassOf <http://informatica.ru/ontology/Thing/Event> ;
+                                                            
+                                                            rdfs:comment "Установление (обоснование) истинности высказывания, суждения, теории"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Event/Запись
+
+<http://informatica.ru/ontology/Thing/Event/Запись> rdf:type owl:Class ;
+                                                    
+                                                    rdfs:subClassOf <http://informatica.ru/ontology/Thing/Event> ;
+                                                    
+                                                    rdfs:comment "Процесс, посредством которого информация вносится и сохраняется в некотором физическом теле с целью её последующего получения (воспроизведения)"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Event/Инициализация
+
+<http://informatica.ru/ontology/Thing/Event/Инициализация> rdf:type owl:Class ;
+                                                           
+                                                           rdfs:subClassOf <http://informatica.ru/ontology/Thing/Event> ;
+                                                           
+                                                           rdfs:comment "Приведение к исходному состоянию"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Event/Кодирование
+
+<http://informatica.ru/ontology/Thing/Event/Кодирование> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:subClassOf <http://informatica.ru/ontology/Thing/Event> ;
+                                                         
+                                                         rdfs:comment "Отображение (преобразование) некоторых объектов (событий, состояний) в систему конструктивных объектов (называемых кодовыми образами), совершаемое по определенным правилам"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Event/Компоновка
+
+<http://informatica.ru/ontology/Thing/Event/Компоновка> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:subClassOf <http://informatica.ru/ontology/Thing/Event> ;
+                                                        
+                                                        rdfs:comment "Процесс составления целого из частей"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Event/Маршрутизация
+
+<http://informatica.ru/ontology/Thing/Event/Маршрутизация> rdf:type owl:Class ;
+                                                           
+                                                           rdfs:subClassOf <http://informatica.ru/ontology/Thing/Event> ;
+                                                           
+                                                           rdfs:comment "Процесс определения маршрута следования информации в сетях связи"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Event/Навигация
+
+<http://informatica.ru/ontology/Thing/Event/Навигация> rdf:type owl:Class ;
+                                                       
+                                                       rdfs:subClassOf <http://informatica.ru/ontology/Thing/Event> ;
+                                                       
+                                                       rdfs:comment "Процесс определения местоположения и прокладки маршрута"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Event/Синтез
+
+<http://informatica.ru/ontology/Thing/Event/Синтез> rdf:type owl:Class ;
+                                                    
+                                                    rdfs:subClassOf <http://informatica.ru/ontology/Thing/Event> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Event/Трансляция
+
+<http://informatica.ru/ontology/Thing/Event/Трансляция> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:subClassOf <http://informatica.ru/ontology/Thing/Event> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Event/Управление
+
+<http://informatica.ru/ontology/Thing/Event/Управление> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:subClassOf <http://informatica.ru/ontology/Thing/Event> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Event/Чтение
+
+<http://informatica.ru/ontology/Thing/Event/Чтение> rdf:type owl:Class ;
+                                                    
+                                                    rdfs:subClassOf <http://informatica.ru/ontology/Thing/Event> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Искусство
+
+<http://informatica.ru/ontology/Thing/Object/Искусство> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Материя
+
+<http://informatica.ru/ontology/Thing/Object/Материя> rdf:type owl:Class ;
+                                                      
+                                                      rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Метод
+
+<http://informatica.ru/ontology/Thing/Object/Метод> rdf:type owl:Class ;
+                                                    
+                                                    rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Наука
+
+<http://informatica.ru/ontology/Thing/Object/Наука> rdf:type owl:Class ;
+                                                    
+                                                    rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Парадигма
+
+<http://informatica.ru/ontology/Thing/Object/Парадигма> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Программа
+
+<http://informatica.ru/ontology/Thing/Object/Программа> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Слово
+
+<http://informatica.ru/ontology/Thing/Object/Слово> rdf:type owl:Class ;
+                                                    
+                                                    rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/СтруктурнаяЕдиница
+
+<http://informatica.ru/ontology/Thing/Object/СтруктурнаяЕдиница> rdf:type owl:Class ;
+                                                                 
+                                                                 rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Текст
+
+<http://informatica.ru/ontology/Thing/Object/Текст> rdf:type owl:Class ;
+                                                    
+                                                    rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Теория
+
+<http://informatica.ru/ontology/Thing/Object/Теория> rdf:type owl:Class ;
+                                                     
+                                                     rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Техника
+
+<http://informatica.ru/ontology/Thing/Object/Техника> rdf:type owl:Class ;
+                                                      
+                                                      rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Энергия
+
+<http://informatica.ru/ontology/Thing/Object/Энергия> rdf:type owl:Class ;
+                                                      
+                                                      rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Язык
+
+<http://informatica.ru/ontology/Thing/Object/Язык> rdf:type owl:Class ;
+                                                   
+                                                   rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство
+
+<http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство> rdf:type owl:Class ;
+                                                                                 
+                                                                                 rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Искусство> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Искусство/Литература
+
+<http://informatica.ru/ontology/Thing/Object/Искусство/Литература> rdf:type owl:Class ;
+                                                                   
+                                                                   rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Искусство> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Искусство/Музыка
+
+<http://informatica.ru/ontology/Thing/Object/Искусство/Музыка> rdf:type owl:Class ;
+                                                               
+                                                               rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Искусство> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство/Архитектура
+
+<http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство/Архитектура> rdf:type owl:Class ;
+                                                                                             
+                                                                                             rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство/Живопись
+
+<http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство/Живопись> rdf:type owl:Class ;
+                                                                                          
+                                                                                          rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство/Скульптура
+
+<http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство/Скульптура> rdf:type owl:Class ;
+                                                                                            
+                                                                                            rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство/Фотография
+
+<http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство/Фотография> rdf:type owl:Class ;
+                                                                                            
+                                                                                            rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Искусство/ИзобразительноеИскусство> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Искусство/Литература/Поэзия
+
+<http://informatica.ru/ontology/Thing/Object/Искусство/Литература/Поэзия> rdf:type owl:Class ;
+                                                                          
+                                                                          rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Искусство/Литература> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Искусство/Литература/Проза
+
+<http://informatica.ru/ontology/Thing/Object/Искусство/Литература/Проза> rdf:type owl:Class ;
+                                                                         
+                                                                         rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Искусство/Литература> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Материя/Вещество
+
+<http://informatica.ru/ontology/Thing/Object/Материя/Вещество> rdf:type owl:Class ;
+                                                               
+                                                               rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Материя> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Материя/Материал
+
+<http://informatica.ru/ontology/Thing/Object/Материя/Материал> rdf:type owl:Class ;
+                                                               
+                                                               rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Материя> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Материя/Предмет
+
+<http://informatica.ru/ontology/Thing/Object/Материя/Предмет> rdf:type owl:Class ;
+                                                              
+                                                              rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Материя> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Материя/Предмет/Устройство
+
+<http://informatica.ru/ontology/Thing/Object/Материя/Предмет/Устройство> rdf:type owl:Class ;
+                                                                         
+                                                                         rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Материя/Предмет> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Материя/Предмет/Устройство/ВычислительноеУстройство
+
+<http://informatica.ru/ontology/Thing/Object/Материя/Предмет/Устройство/ВычислительноеУстройство> rdf:type owl:Class ;
+                                                                                                  
+                                                                                                  rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Материя/Предмет/Устройство> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Материя/Предмет/Устройство/ОптическоеУстройство
+
+<http://informatica.ru/ontology/Thing/Object/Материя/Предмет/Устройство/ОптическоеУстройство> rdf:type owl:Class ;
+                                                                                              
+                                                                                              rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Материя/Предмет/Устройство> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Наука/Информатика
+
+<http://informatica.ru/ontology/Thing/Object/Наука/Информатика> rdf:type owl:Class ;
+                                                                
+                                                                rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Наука> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Наука/Логика
+
+<http://informatica.ru/ontology/Thing/Object/Наука/Логика> rdf:type owl:Class ;
+                                                           
+                                                           rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Наука> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Наука/Информатика/БазыДанных
+
+<http://informatica.ru/ontology/Thing/Object/Наука/Информатика/БазыДанных> rdf:type owl:Class ;
+                                                                           
+                                                                           rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Наука/Информатика> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ЗащитаИнформации
+
+<http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ЗащитаИнформации> rdf:type owl:Class ;
+                                                                                 
+                                                                                 rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Наука/Информатика> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ИнформационныеСети
+
+<http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ИнформационныеСети> rdf:type owl:Class ;
+                                                                                   
+                                                                                   rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Наука/Информатика> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ИскусственныйИнтеллект
+
+<http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ИскусственныйИнтеллект> rdf:type owl:Class ;
+                                                                                       
+                                                                                       rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Наука/Информатика> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ЗащитаИнформации/Криптография
+
+<http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ЗащитаИнформации/Криптография> rdf:type owl:Class ;
+                                                                                              
+                                                                                              rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ЗащитаИнформации> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ЗащитаИнформации/Стеганография
+
+<http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ЗащитаИнформации/Стеганография> rdf:type owl:Class ;
+                                                                                               
+                                                                                               rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Наука/Информатика/ЗащитаИнформации> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Наука/Математика/Алгебра
+
+<http://informatica.ru/ontology/Thing/Object/Наука/Математика/Алгебра> rdf:type owl:Class ;
+                                                                       
+                                                                       rdfs:subClassOf <http://informatica.ru/ontology/Thing/Objectt/Наука/Математика> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Наука/Математика/Арифметика
+
+<http://informatica.ru/ontology/Thing/Object/Наука/Математика/Арифметика> rdf:type owl:Class ;
+                                                                          
+                                                                          rdfs:subClassOf <http://informatica.ru/ontology/Thing/Objectt/Наука/Математика> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Наука/Математика/Геометрия
+
+<http://informatica.ru/ontology/Thing/Object/Наука/Математика/Геометрия> rdf:type owl:Class ;
+                                                                         
+                                                                         rdfs:subClassOf <http://informatica.ru/ontology/Thing/Objectt/Наука/Математика> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Наука/Математика/ДискретнаяМатематика
+
+<http://informatica.ru/ontology/Thing/Object/Наука/Математика/ДискретнаяМатематика> rdf:type owl:Class ;
+                                                                                    
+                                                                                    rdfs:subClassOf <http://informatica.ru/ontology/Thing/Objectt/Наука/Математика> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Наука/Математика/МатематическийАнализ
+
+<http://informatica.ru/ontology/Thing/Object/Наука/Математика/МатематическийАнализ> rdf:type owl:Class ;
+                                                                                    
+                                                                                    rdfs:subClassOf <http://informatica.ru/ontology/Thing/Objectt/Наука/Математика> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Наука/Математика/Статистика
+
+<http://informatica.ru/ontology/Thing/Object/Наука/Математика/Статистика> rdf:type owl:Class ;
+                                                                          
+                                                                          rdfs:subClassOf <http://informatica.ru/ontology/Thing/Objectt/Наука/Математика> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Наука/Математика/Топология
+
+<http://informatica.ru/ontology/Thing/Object/Наука/Математика/Топология> rdf:type owl:Class ;
+                                                                         
+                                                                         rdfs:subClassOf <http://informatica.ru/ontology/Thing/Objectt/Наука/Математика> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Наука/Физика/Гидравлика
+
+<http://informatica.ru/ontology/Thing/Object/Наука/Физика/Гидравлика> rdf:type owl:Class ;
+                                                                      
+                                                                      rdfs:subClassOf <http://informatica.ru/ontology/Thing/Abstract/Наука/Физика> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Организация/МеждународнаяОрганизация
+
+<http://informatica.ru/ontology/Thing/Object/Организация/МеждународнаяОрганизация> rdf:type owl:Class ;
+                                                                                   
+                                                                                   rdfs:subClassOf <http://informatica.ru/ontology/Object/Организация> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Организация/ОбразовательноеУчреждение
+
+<http://informatica.ru/ontology/Thing/Object/Организация/ОбразовательноеУчреждение> rdf:type owl:Class ;
+                                                                                    
+                                                                                    rdfs:subClassOf <http://informatica.ru/ontology/Object/Организация> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/СтруктурнаяЕдиница/Модуль
+
+<http://informatica.ru/ontology/Thing/Object/СтруктурнаяЕдиница/Модуль> rdf:type owl:Class ;
+                                                                        
+                                                                        rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/СтруктурнаяЕдиница> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Теория/ТеорияВероятностей
+
+<http://informatica.ru/ontology/Thing/Object/Теория/ТеорияВероятностей> rdf:type owl:Class ;
+                                                                        
+                                                                        rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Теория> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Теория/ТеорияОтносительности
+
+<http://informatica.ru/ontology/Thing/Object/Теория/ТеорияОтносительности> rdf:type owl:Class ;
+                                                                           
+                                                                           rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Теория> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Теория/ТеорияВероятностей/ТеорияИгр
+
+<http://informatica.ru/ontology/Thing/Object/Теория/ТеорияВероятностей/ТеорияИгр> rdf:type owl:Class ;
+                                                                                  
+                                                                                  rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Теория/ТеорияВероятностей> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Человек/Пользователь
+
+<http://informatica.ru/ontology/Thing/Object/Человек/Пользователь> rdf:type owl:Class ;
+                                                                   
+                                                                   rdfs:subClassOf <http://informatica.ru/ontology/Object/Человек> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Человек/Разработчик
+
+<http://informatica.ru/ontology/Thing/Object/Человек/Разработчик> rdf:type owl:Class ;
+                                                                  
+                                                                  rdfs:subClassOf <http://informatica.ru/ontology/Object/Человек> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Человек/Ученый
+
+<http://informatica.ru/ontology/Thing/Object/Человек/Ученый> rdf:type owl:Class ;
+                                                             
+                                                             rdfs:subClassOf <http://informatica.ru/ontology/Object/Человек> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Язык/ЕстественныйЯзык
+
+<http://informatica.ru/ontology/Thing/Object/Язык/ЕстественныйЯзык> rdf:type owl:Class ;
+                                                                    
+                                                                    rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Язык> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык
+
+<http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык> rdf:type owl:Class ;
+                                                                  
+                                                                  rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Язык> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования
+
+<http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования> rdf:type owl:Class ;
+                                                                                       
+                                                                                       rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкРазметки
+
+<http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкРазметки> rdf:type owl:Class ;
+                                                                               
+                                                                               rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкСценариев
+
+<http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкСценариев> rdf:type owl:Class ;
+                                                                                
+                                                                                rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования/АлгоритмическийЯзык
+
+<http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования/АлгоритмическийЯзык> rdf:type owl:Class ;
+                                                                                                           
+                                                                                                           rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования/ЛогическийЯзык
+
+<http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования/ЛогическийЯзык> rdf:type owl:Class ;
+                                                                                                      
+                                                                                                      rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования/ФункциональныйЯзык
+
+<http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования/ФункциональныйЯзык> rdf:type owl:Class ;
+                                                                                                          
+                                                                                                          rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования/ЭзотерическийЯзык
+
+<http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования/ЭзотерическийЯзык> rdf:type owl:Class ;
+                                                                                                         
+                                                                                                         rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Язык/ФормальныйЯзык/ЯзыкПрограммирования> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Objectt/Наука/Математика
+
+<http://informatica.ru/ontology/Thing/Objectt/Наука/Математика> rdf:type owl:Class ;
+                                                                
+                                                                rdfs:subClassOf <http://informatica.ru/ontology/Thing/Object/Наука> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Quality/Емкость
+
+<http://informatica.ru/ontology/Thing/Quality/Емкость> rdf:type owl:Class ;
+                                                       
+                                                       rdfs:subClassOf <http://informatica.ru/ontology/Thing/Quality> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Quality/Жесткость
+
+<http://informatica.ru/ontology/Thing/Quality/Жесткость> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:subClassOf <http://informatica.ru/ontology/Thing/Quality> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Quality/Масса
+
+<http://informatica.ru/ontology/Thing/Quality/Масса> rdf:type owl:Class ;
+                                                     
+                                                     rdfs:subClassOf <http://informatica.ru/ontology/Thing/Quality> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Quality/Надежность
+
+<http://informatica.ru/ontology/Thing/Quality/Надежность> rdf:type owl:Class ;
+                                                          
+                                                          rdfs:subClassOf <http://informatica.ru/ontology/Thing/Quality> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Quality/Порядок
+
+<http://informatica.ru/ontology/Thing/Quality/Порядок> rdf:type owl:Class ;
+                                                       
+                                                       rdfs:subClassOf <http://informatica.ru/ontology/Thing/Quality> ;
+                                                       
+                                                       rdfs:comment "Определённая последовательность в расположении, размещении, ходе чего-либо"@ru .
+
+
+
+###  http://informatica.ru/ontology/Thing/Quality/Проводимость
+
+<http://informatica.ru/ontology/Thing/Quality/Проводимость> rdf:type owl:Class ;
+                                                            
+                                                            rdfs:subClassOf <http://informatica.ru/ontology/Thing/Quality> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Quality/Прочность
+
+<http://informatica.ru/ontology/Thing/Quality/Прочность> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:subClassOf <http://informatica.ru/ontology/Thing/Quality> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Quality/Размер
+
+<http://informatica.ru/ontology/Thing/Quality/Размер> rdf:type owl:Class ;
+                                                      
+                                                      rdfs:subClassOf <http://informatica.ru/ontology/Thing/Quality> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Quality/Светимость
+
+<http://informatica.ru/ontology/Thing/Quality/Светимость> rdf:type owl:Class ;
+                                                          
+                                                          rdfs:subClassOf <http://informatica.ru/ontology/Thing/Quality> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Quality/Скорость
+
+<http://informatica.ru/ontology/Thing/Quality/Скорость> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:subClassOf <http://informatica.ru/ontology/Thing/Quality> .
+
+
+
+###  http://informatica.ru/ontology/Thing/Quality/Упругость
+
+<http://informatica.ru/ontology/Thing/Quality/Упругость> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:subClassOf <http://informatica.ru/ontology/Thing/Quality> .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://informatica.ru/ontology/Thing/Object/Наука/Информатика/Биоинформатика
+
+<http://informatica.ru/ontology/Thing/Object/Наука/Информатика/Биоинформатика> rdf:type owl:NamedIndividual ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://informatica.ru/ontology/PartOf> ;
+                                                                                          owl:allValuesFrom <http://informatica.ru/ontology/Thing/Object/Наука/Информатика>
+                                                                                        ] .
+
+
+
+###  http://informatica.ru/ontology/Thing/Object/Теория/ТеорияОтносительности/ОбщаяТеорияОтносительности
+
+<http://informatica.ru/ontology/Thing/Object/Теория/ТеорияОтносительности/ОбщаяТеорияОтносительности> rdf:type owl:NamedIndividual ,
+                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                 owl:onProperty <http://informatica.ru/ontology#InstanceOf> ;
+                                                                                                                 owl:allValuesFrom <http://informatica.ru/ontology/Thing/Object/Теория/ТеорияОтносительности>
+                                                                                                               ] .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+
