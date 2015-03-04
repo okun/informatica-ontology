@@ -7,9 +7,10 @@
         <link rel="stylesheet" type="text/css" href="/static/js/dist/themes/default/style.min.css"/>
         <script type="text/javascript" src="/static/js/jquery-1.11.2.js"></script>
         <script type="text/javascript" src="/static/js/dist/jstree.js"></script>
-        <script>$SCRIPT_ROOT= {{ request.script_root|tojson }};</script>
+        <script>$SCRIPT_ROOT= {{ request.base_url|tojson }};</script> 
 	</head>
 	<body>
+        <h1>header</h1>
 		<div class="main-menu"></div>
 		<hr>
 		{% block content %}{% endblock %}

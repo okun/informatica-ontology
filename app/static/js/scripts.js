@@ -1,9 +1,16 @@
 //page loading:
 $(document).ready(function(){
-    //$SCRIPT_ROOT={{ request.script_root|tojson|safe }};
+    var loadTree = $SCRIPT_ROOT + 'gettree';
     $.ajax({ type:'GET',
-               url:'http://127.0.0.1:5000/gettree',
-            success: function(data){
-            console.log(data);} });
-    $("#onto-tree").jstree();
+             url:loadTree, //'http://127.0.0.1:5000/gettree',
+             success: function(data){
+                //createTree(data);
+                console.log(data);
+                } 
+            });//end of ajax
+    
 });
+function createTree(data){
+    nodesData = data.results.bindings;
+    $("#onto-tree").jstree();
+}//end of createTree

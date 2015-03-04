@@ -17,9 +17,9 @@ def getTree():
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-SELECT ?subject ?object  ?value
-	WHERE { ?subject rdfs:subClassOf ?object .
-	?subject rdfs:comment ?value . }
+SELECT ?node ?parent  ?value
+	WHERE { ?node rdfs:subClassOf ?parent .
+	?node rdfs:comment ?description . }
     """)
     json_result = results.serialize(format='json', encoding='utf8')
     return json_result
